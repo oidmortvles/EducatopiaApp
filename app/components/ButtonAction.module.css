@@ -1,0 +1,167 @@
+@keyframes spinn {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.buttonAction{
+    min-width: 4rem;
+    max-width:10rem;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding-inline: 1rem;
+    border-radius: var(--border);
+    color:var(--blackTransparent);
+    border: thin solid var(--blackTransparent);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: x-small;
+    text-decoration: none;
+    text-align: center;
+    text-wrap-mode: nowrap;
+    transition: 0.3s ease-out;
+}
+
+.buttonAction:hover{
+    color: var(--white);
+    background-color: var(--blackTransparent);
+    border-color: white;
+    cursor: pointer;
+}
+
+
+.buttonAction .loadingState{
+    fill: var(--white);
+    animation: spinn .3s linear infinite;
+}
+
+
+
+/* 1 */
+.buttonAction1{
+    min-width: 4rem;
+    max-width:10rem;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2b);
+    padding-inline: 1rem;
+    border-radius: var(--border);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: x-small;
+    text-decoration: none;
+    text-align: center;
+    border: thin solid var(--color2b);
+    color: var(--white);
+    text-wrap-mode: nowrap;
+    transition: 0.3s ease-out;
+}
+
+.buttonAction1:hover{
+    background-color: var(--color2c);
+    border-color: var(--color2c);
+    cursor: pointer;
+}
+
+
+.buttonAction1 .loadingState{
+    fill: var(--white);
+    animation: spinn .3s linear infinite;
+}
+
+
+
+
+/* 2 */
+.buttonAction2{
+    min-width: 4rem;
+    max-width:10rem;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1b);
+    padding-inline: 1rem;
+    border-radius: var(--border);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: x-small;
+    text-decoration: none;
+    text-align: center;
+    border: thin solid var(--color1b);
+    color:var(--white);
+    text-wrap-mode: nowrap;
+    transition: 0.3s ease-out;
+}
+
+.buttonAction2:hover{
+    background-color: var(--color1);
+    border-color: var(--color1);
+    cursor: pointer;
+}
+
+.buttonAction2 .loadingState{
+    fill: var(--white);
+    animation: spinn .8s linear infinite;
+}
+
+.loaderContainer{
+    display: flex;
+}
+
+
+
+/* 3 */
+.buttonAction3{
+    min-width: 4rem;
+    max-width:10rem;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color3);
+    padding-inline: 1rem;
+    border-radius: var(--border);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: x-small;
+    text-decoration: none;
+    text-align: center;
+    border: thin solid var(--color3);
+    color: var(--white);
+    text-wrap-mode: nowrap;
+    transition: 0.3s ease-out;
+}
+
+.buttonAction3:hover{
+    background-color: var(--color3c);
+    border-color:  var(--color3c);
+    cursor: pointer;
+}
+
+
+.buttonAction3 .loadingState{
+    fill: var(--white);
+    animation: spinn .3s linear infinite;
+}
+
+
+
+.buttonAction:active,.buttonAction1:active,.buttonAction2:active,.buttonAction3:active{
+    transform: scale(.85);
+}
+
+
+@media only screen and (max-width: 850px){
+
+}

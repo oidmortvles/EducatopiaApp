@@ -1,0 +1,46 @@
+.home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;    
+}
+
+
+.dv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10rem 0rem;
+}
+
+
+
+/* PAGINA PRINCIPAL */
+.helloWord{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.textBox h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+    line-height: normal;;
+}
+
+
+.textBox p{
+    color: var(--white);
+}

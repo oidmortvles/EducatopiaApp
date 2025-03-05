@@ -1,0 +1,71 @@
+.headLineMiddle{
+    width: 100%;
+    height: 27rem;
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+
+.boxLeft{
+    width: 70%;    
+    border-radius: var(--border);
+    background:url("https://img.freepik.com/premium-photo/affirmation-card-budgeting-with-autism-generative-ai_804788-112506.jpg?semt=ais_hybrid");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: var(--border);
+    overflow: hidden;
+}
+
+
+.leftBody{
+    position: absolute;
+    top: 0px;
+    left: 0px;    
+    background-color: var(--blackDiff);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+.leftBody h4{
+    color: var(--white);
+    font-size: xxx-large;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+
+.leftBody p{
+    color: var(--white);
+    opacity: .7;
+}
+
+
+.buttonAccess{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+
+.boxRight{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+    gap: 1rem;
+    border-radius: var(--border);
+    overflow: hidden;
+}

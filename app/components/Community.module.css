@@ -1,0 +1,39 @@
+.community{
+    width: 100%;
+    min-height: 60dvh;
+    background-color: var(--color1);
+    border-radius: var(--border);
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+.tittle{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.tittle span{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+
+.btnDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
