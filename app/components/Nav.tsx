@@ -8,7 +8,7 @@ const Nav : React.FC = () =>{
                 <h2 className={styles.logo}>EDUCATOPIA</h2>
             </div>
 
-            <ButtonAction colorSet={1} text='Ingresar' to='#'/>
+            <ButtonAction colorSet={1} text='Ingresar' to='/login'/>
         </nav>
     )
 }

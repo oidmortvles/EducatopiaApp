@@ -17,29 +17,3 @@
 
 
 
-/* PAGINA PRINCIPAL */
-.helloWord{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-
-.textBox h1{
-    font-size: 5rem;
-    text-transform: uppercase;
-    color: var(--grey1);
-    font-weight: 600;
-    line-height: normal;;
-}
-
-
-.textBox p{
-    color: var(--grey1);
-}
