@@ -69,16 +69,13 @@
   font-weight: 300;
 }
 
-/* html,
-body {
-  overflow-x: hidden;
-} */
+
 
 body {  
   padding: 0rem 4rem;
   min-height: 100dvh;
   position: relative;
-  max-width: 1440px;  
+  max-width: 1440px;   
   margin: 0rem auto;
   background-color: var(--white);
 }

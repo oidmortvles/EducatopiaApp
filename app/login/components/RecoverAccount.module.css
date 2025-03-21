@@ -1,0 +1,16 @@
+.recoverAccount{
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--border);
+    background-color: var(--color1);
+    transition: .3s ease-out;
+}
+
+.recoverAccount p{
+    color: white;
+}
+
+
+.recoverAccount:hover{
+    background-color: var(--color1b);
+}

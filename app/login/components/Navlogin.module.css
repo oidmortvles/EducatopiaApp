@@ -1,5 +1,4 @@
-.nav{
-    width: 100%;
+.navLogin{    width: 100%;
     min-height: 4rem;
     display: flex;
     align-items: center;
@@ -11,5 +10,3 @@
     left: 0px;
     z-index: 1000;
 }
-
-

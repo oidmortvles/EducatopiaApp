@@ -1,0 +1,9 @@
+.domain{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.name{
+    font-weight: 800;
+}

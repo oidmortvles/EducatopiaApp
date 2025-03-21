@@ -33,7 +33,7 @@
 .buttonAction:hover{
     color: var(--white);
     background-color: var(--blackTransparent);
-    border-color: white;
+    border-color: transparent;
     cursor: pointer;
 }
 
