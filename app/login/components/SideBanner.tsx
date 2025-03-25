@@ -9,7 +9,7 @@ const SideBanner: React.FC = () =>{
                 <img src='https://www.educ.ar/uploads/resources/images/banner-home_(2).jpg'/>
                 <div className={styles.toRegister}>
                     <p>¿Aún no tenés cuenta?</p>
-                    <ButtonAction colorSet={2} text='Registrate' to='/register'/>
+                    <ButtonAction colorSet={1} text='Registrate' to='/register'/>
                 </div>
             </article>            
         </aside>

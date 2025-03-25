@@ -15,14 +15,14 @@ const LoginForm : React.FC = () =>{
         required:{value:true, message:"El Usuario es requerido"},
         minLength:{value:4, message:"El campo debe tener al menos 4 caracteres"},
         maxLength:{value:12, message:"El campo debe tener menos de 12 caracteres"}, 
-        pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},           
+        pattern:{value:/^[a-zA-Z0-9ñÑ._-]+$/, message:"Revise los caracteres ingresados"},           
     };  
 
     const passwordValidator= {
-        required:{value:true, message:"La Contraseña es requerido"},
+        required:{value:true, message:"La Contraseña es requerida"},
         minLength:{value:6, message:"El campo debe tener al menos 6 caracteres"},
         maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},
-        pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},             
+        pattern:{value:/^[a-zA-Z0-9ñÑ._-]+$/, message:"Revise los caracteres ingresados"},             
     }
 
 
@@ -33,7 +33,7 @@ const LoginForm : React.FC = () =>{
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(datos)        
         }
-        console.log(loginData)
+        console.log(loginData.body)
         reset();
     }
 

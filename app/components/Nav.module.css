@@ -4,11 +4,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0rem;
-    background-color: transparent;
+    padding: 1rem 0;
+    background-color: #0000;
     position: sticky;
-    top: 1rem;
-    left: 0px;
+    top: 0rem;
+    left: 0rem;
     z-index: 1000;
 }
 

@@ -8,9 +8,8 @@ import ButtonAction from './components/ButtonAction';
 
 const Home : React.FC = () =>{
   return(
-    <>
-    <Nav/>
     <main className={stlyes.home}>
+      <Nav/>
       
       <Header/>
       <Content/>
@@ -25,8 +24,7 @@ const Home : React.FC = () =>{
       </div>
     
 
-    </main>
-    </>
+    </main>    
   )
 }
 
