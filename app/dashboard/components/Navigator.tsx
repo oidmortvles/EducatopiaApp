@@ -17,10 +17,9 @@ const Navigator : React.FC <NavigatorProps> = ({text, to, icon }) =>{
     const path = usePathname();
 
     useEffect(() => {
-        console.log(`to:${to} y path: ${path}`)
         setSelected(path === to.toLowerCase());
-        console.log(selected)
-      }, [path, to, selected]);
+      }, [path, to]);
+      
       
 
     return(

@@ -1,0 +1,45 @@
+.headerProfile{
+    width: 100%;
+    border-radius: var(--border);
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap:.5rem;
+}
+
+
+.imgHeader{
+    width: 6rem;
+    height: 6rem;
+    border-radius: var(--border);
+    background-color: var(--grey2);
+}
+
+
+.dataBox{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.welcome{
+    font-weight: 600;
+    font-size: x-large;
+    line-height: inherit;
+}
+
+
+.personalData{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);  
+    gap: .5rem; 
+    
+
+}

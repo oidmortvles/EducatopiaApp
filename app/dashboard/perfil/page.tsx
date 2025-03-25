@@ -1,6 +1,10 @@
+import HeaderProfile from './components/HeaderProfile';
+import styles from './perfil.module.css';
+
+
 const Perfil : React.FC = () =>{
     return(
-        <h1>Perfil</h1>
+        <HeaderProfile/>
     )
 }
 

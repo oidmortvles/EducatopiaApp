@@ -4,9 +4,9 @@
     align-items: center;
     justify-content: flex-start;
     gap: .5rem;
-    border: thin solid transparent;
+    background-color: transparent;
     padding:.5rem;
-    border-radius: 5rem;
+    border-radius: var(--border);
     opacity: .5;
     transition: .3s ease-out;
 }
@@ -21,6 +21,12 @@
     background-color: transparent;
     border-radius: 100%;
     padding: .5rem;
+    transition: .3s ease-out;
+}
+
+
+.icon svg{
+    transition: .3s ease-out;
 }
 
 
@@ -42,14 +48,19 @@
     align-items: center;
     justify-content: flex-start;
     gap: .5rem;
-    border: thin solid var(--grey2);
-    padding:.5rem;
-    border-radius: 5rem;
-    opacity: .5;
-    transition: .3s ease-out;
+    background-color: var(--color1c);
+    padding: .5rem;
+    border-radius: var(--border);
+    opacity: 1;
+    transition: all .3s ease-out;
 }
 
 
-.selected icon{
-    background-color: var(--color1);
+.selected .icon{
+    background-color: var(--color1);    
+}
+
+
+.selected svg{
+    fill: var(--white);
 }

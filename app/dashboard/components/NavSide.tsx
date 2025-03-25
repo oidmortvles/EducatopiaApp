@@ -1,5 +1,3 @@
-
-
 import Domain from '@/app/components/Domain';
 import Close from './icons/Close';
 import MyResources from './icons/MyResources';
@@ -16,10 +14,10 @@ const NavSide : React.FC = () =>{
             <Domain/>
             
             <ul className={styles.list}>
-                <Navigator text='Perfil' icon={<Profile/>} to='dashboard/perfil' />
-                <Navigator text='Recursero' icon={<Resources/>} to='dashboard/recursero' />
-                <Navigator text='Grupos' icon={<Groups/>} to='dashboard/grupos' />
-                <Navigator text='Mis recursos' icon={<MyResources/>} to='dashboard/misrecursos' />                          
+                <Navigator text='Perfil' icon={<Profile/>} to='/dashboard/perfil' />
+                <Navigator text='Recursero' icon={<Resources/>} to='/dashboard/recursero' />
+                <Navigator text='Grupos' icon={<Groups/>} to='/dashboard/grupos' />
+                <Navigator text='Mis recursos' icon={<MyResources/>} to='/dashboard/misrecursos' />                          
             </ul>
 
             <div className={styles.foot}>
