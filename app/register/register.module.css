@@ -1,0 +1,10 @@
+.register{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+

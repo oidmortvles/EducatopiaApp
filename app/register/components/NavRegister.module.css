@@ -1,0 +1,13 @@
+.navRegister{    
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    background-color: #0000;
+    position: sticky;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1000;
+}

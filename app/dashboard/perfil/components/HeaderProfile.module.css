@@ -33,6 +33,11 @@
     line-height: inherit;
 }
 
+.specialization{
+    font-size: small;
+    color: var(--grey3);
+}
+
 
 .personalData{
     width: 100%;

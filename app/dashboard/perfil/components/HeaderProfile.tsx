@@ -8,7 +8,10 @@ const HeaderProfile : React.FC = () =>{
             </div>
 
             <section className={styles.dataBox}>
-                <h3 className={styles.welcome}>Hola Lucia!</h3>
+                <div>
+                    <h3 className={styles.welcome}>Hola Lucia!</h3>
+                    <p className={styles.specialization}>Docente - Biologia</p>
+                </div>
                 <div className={styles.personalData}>
                     <TabsData tittle='Nombre' data='Lucia Santos'/>
                     <TabsData tittle='Usuario' data='LuciaLu'/>

@@ -1,0 +1,781 @@
+{
+	"info": {
+		"_postman_id": "34c36ef7-82e2-4357-af38-0e2b2677d699",
+		"name": "Educatopia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21713862",
+		"_collection_link": "https://galactic-station-72433.postman.co/workspace/Educatopia~7c71023c-9e02-4bab-a883-4237f29fdf5d/collection/21713862-34c36ef7-82e2-4357-af38-0e2b2677d699?action=share&source=collection_link&creator=21713862"
+	},
+	"item": [
+		{
+			"name": "Public Routes",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"juanpbriza@gmail.com\",\r\n    \"Password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/public/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Sophia",
+									"type": "text"
+								},
+								{
+									"key": "LastName",
+									"value": "Becerra",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "sophiabecerra@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "Document",
+									"value": "55989445",
+									"type": "text"
+								},
+								{
+									"key": "Specialization",
+									"value": "Fisica",
+									"type": "text"
+								},
+								{
+									"key": "EducationLevel",
+									"value": "Superior",
+									"type": "text"
+								},
+								{
+									"key": "ProfileImg",
+									"value": "",
+									"type": "file"
+								},
+								{
+									"key": "SubscriptionTypeID",
+									"value": "1",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/public/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/activate-account/1ij9rv5p49b5124bs71g",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"activate-account",
+								"1ij9rv5p49b5124bs71g"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"juanpbrizo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/forgot-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Private Routes",
+			"item": [
+				{
+					"name": "Get Models",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model\": \"Subscription\",\r\n    \"id\": 0,\r\n    \"count\":false,\r\n    \"attributes\": [],\r\n    \"include\": [\r\n    //     {\r\n\t// \t\"model\": \"Tag\",\r\n\t// \t\"count\": false,\r\n\t// \t\"top\": 0,\r\n\t// \t\"attributes\":[\"TagID\"]\r\n\t// },\r\n    // {\r\n\t// \t\"model\": \"Forum\",\r\n\t// \t\"count\": false,\r\n\t// \t\"top\": 0,\r\n\t// \t\"attributes\":[\"ForumID\"]\r\n\t// },\r\n    // {\r\n\t// \t\"model\": \"Audiovisual\",\r\n\t// \t\"count\": false,\r\n\t// \t\"top\": 0,\r\n\t// \t\"attributes\":[\"Url\"]\r\n\t// }\r\n  ]\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/models",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Activities",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Comentar\",\r\n    \"Points\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/activities",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Forums",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Artes\",\r\n    \"Description\": \"Un espacio creativo para explorar todas las formas de arte: pintura, escultura, literatura, fotografía y más. Comparte tus obras, inspírate y conecta con otros apasionados del arte en todas sus manifestaciones.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/forums",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"forums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Title",
+									"value": "Post 1",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "Post de prueba 1",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "1,2,3",
+									"type": "text"
+								},
+								{
+									"key": "forums",
+									"value": "3,4,5",
+									"type": "text"
+								},
+								{
+									"key": "Resource",
+									"value": "",
+									"type": "file"
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Profiles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Dueño\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/profiles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Subscription Types",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Ilimitado\",\r\n    \"Price\": 100,\r\n    \"DurationDays\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/subscription-types",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"subscription-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post User Downloads",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ActivityID\": 1,\r\n    \"ResourceID\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/user-downloads",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"user-downloads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Tags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Comentar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/tags",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post User Forum",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ForumID\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/user-forums",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"user-forums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Activities",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Comentar\",\r\n    \"Points\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/activities/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"activities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Forums",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Deportes\",\r\n    \"Description\": \"Un grupo dedicado a compartir información, noticias y recursos sobre deportes. Ideal para quienes desean estar al tanto de las últimas tendencias, análisis, eventos y aprender más sobre diversas disciplinas deportivas.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/forums/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"forums",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Posts",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "resource",
+									"type": "file",
+									"src": "c:\\Users\\User\\OneDrive\\Escritorio\\Cotización Educatopía.docx"
+								},
+								{
+									"key": "Title",
+									"value": "Nuevo post de Pruebas 4",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "Este post es para probar el funcionamiento del endpoint",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "1,2,3",
+									"type": "text"
+								},
+								{
+									"key": "forums",
+									"value": "3,4,5",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/posts/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Profiles",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Dueños\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/profiles/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"profiles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Subscription Types",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Ilimitado\",\r\n    \"Price\": 100,\r\n    \"DurationDays\": 36500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/subscription-types/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"subscription-types",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Tags",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Comentar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/tags/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"tags",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Actities",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/private/activities/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"activities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Forums",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/private/activities/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"activities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Posts",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/private/posts/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Profiles",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/private/profiles/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"profiles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Subscription Types",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/private/subscription-types/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"subscription-types",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tags",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/private/tags/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"tags",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Forum",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ForumID\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/private/user-forums",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"private",
+								"user-forums"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
