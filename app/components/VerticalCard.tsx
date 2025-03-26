@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ButtonAction from './ButtonAction';
 import styles from './VerticalCard.module.css';
 
@@ -10,17 +11,18 @@ interface VerticalCardProps{
 
 const VerticalCard : React.FC <VerticalCardProps> = ({img, tittle, parraph, to}) =>{
     return(
-        <figure className={styles.verticalCard}>
-            <div className={styles.boxImg}>
-                {img}
-            </div>
+        <Link href={to} about={tittle}>
+            <figure className={styles.verticalCard}>
+                <div className={styles.boxImg}>
+                    {img}
+                </div>
 
-            <div className={styles.boxBody}>
-                <h3 className={styles.tittle}>{tittle}</h3>
-                <p className={styles.parraph}>{parraph}</p>
-                <ButtonAction colorSet={1} text='ver más' to={to}/>
-            </div>
-        </figure>
+                <div className={styles.boxBody}>
+                    <h3 className={styles.tittle}>{tittle}</h3>
+                    <p className={styles.parraph}>{parraph}</p>
+                </div>
+            </figure>
+        </Link>
     )
 }
 

@@ -95,19 +95,29 @@ const RegisterForm : React.FC = () =>{
             </header>
 
             
-            <div className={styles.inputsContainer}>
-                <Input type={"text"} id={"registerNombre"} name={"registerName"} title={"Ingrese su Nombre"} register={register} validator={registerName} warnings={errors.registerName}/>
-                <Input type={"text"} id={"registerApellido"} name={"registerLastName"} title={"Ingrese su Apellido"} register={register} validator={registerLastName} warnings={errors.registerLastName}/>
-                <Input  type={"text"} id={"registerMail"} name={"registerEmail"} title={"Ingrese su Email"} register={register} validator={registerEmail} warnings={errors.registerEmail}/>
-                <Input type={"text"} id={"registerApodo"} name={"registerUsername"} title={"Cree un nombre de Usuario"} register={register} validator={registerUsername} warnings={errors.registerUsername}/>
+            <section className={styles.inputsContainer}>
 
-                <Input type={"number"} id={"registerNumDni"} name={"registerDni"} title={"Ingrese su Dni"} register={register} validator={registerDni} warnings={errors.registerDni}/>            
+                <div className={styles.flexGroup}>
+                    <Input type={"text"} id={"registerNombre"} name={"registerName"} title={"Ingrese su Nombre"} register={register} validator={registerName} warnings={errors.registerName}/>
+                    <Input type={"text"} id={"registerApellido"} name={"registerLastName"} title={"Ingrese su Apellido"} register={register} validator={registerLastName} warnings={errors.registerLastName}/>
+                </div>
 
+                <div className={styles.flexGroup}>
+                    <Input  type={"text"} id={"registerMail"} name={"registerEmail"} title={"Ingrese su Email"} register={register} validator={registerEmail} warnings={errors.registerEmail}/>
+                    <Input type={"text"} id={"registerApodo"} name={"registerUsername"} title={"Cree un nombre de Usuario"} register={register} validator={registerUsername} warnings={errors.registerUsername}/>
+                </div>
+
+                <div className={styles.flexGroup}>
+                    <Input type={"password"} id={"registerContra1"} name={"registerPass1"} title={"Ingrese su Contraseña"} register={register} validator={registerPass1} warnings={errors.registerPass1}/>
+                    <Input  type={"password"} id={"registerContra2"} name={"registerPass2"} title={"Repita su Contraseña"} register={register} validator={registerPass2} warnings={errors.registerPass2}/>
+                </div>
                             
-                <Input type={"password"} id={"registerContra1"} name={"registerPass1"} title={"Ingrese su Contraseña"} register={register} validator={registerPass1} warnings={errors.registerPass1}/>
-                <Input  type={"password"} id={"registerContra2"} name={"registerPass2"} title={"Repita su Contraseña"} register={register} validator={registerPass2} warnings={errors.registerPass2}/>
+                
+                
+                <Input type={"number"} id={"registerNumDni"} name={"registerDni"} title={"Ingrese su Dni"} register={register} validator={registerDni} warnings={errors.registerDni}/>            
+                
                 <ButtonAction colorSet={1} text='Crear Cuenta' type='submit' />
-            </div>           
+            </section>           
         </form>
     )
 }

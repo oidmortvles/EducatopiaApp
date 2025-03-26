@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Community from './components/Community';
 import ButtonAction from './components/ButtonAction';
+import Footer from './components/Footer';
 
 
 const Home : React.FC = () =>{
@@ -23,7 +24,7 @@ const Home : React.FC = () =>{
             <ButtonAction colorSet={0} text='ACTION' />
       </div>
     
-
+      <Footer/>
     </main>    
   )
 }

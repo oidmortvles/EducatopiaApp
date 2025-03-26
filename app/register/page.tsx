@@ -8,7 +8,9 @@ const Register : React.FC = () =>{
         <>
             <NavRegister/>
             <main className={styles.register}>
-                <RegisterForm/>
+                <div className={styles.bodyRegister}>
+                    <RegisterForm/>
+                </div>
             </main>
         </>
     )
