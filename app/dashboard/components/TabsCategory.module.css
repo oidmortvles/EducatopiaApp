@@ -1,0 +1,30 @@
+.tabsCategory{
+    padding: .5rem;
+    border:none;
+    border:2px solid transparent;
+    border-radius: var(--border);
+    background-color: var(--color1c);
+    color:var(--white);
+    transition: .3s ease-out;
+}
+
+
+.tabsCategory:hover{
+    background-color: var(--color1);
+}
+
+
+.tabsCategoryActive{
+    padding: .5rem;
+    border:none;
+    border-radius: var(--border);
+    background-color: var(--color1b);
+    border: 2px solid var(--color1);
+    color:var(--white);
+    transition: .3s ease-out; 
+}
+
+
+.tabsCategory:active{
+    transform: scale(.85);
+}

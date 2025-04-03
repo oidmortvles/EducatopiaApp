@@ -26,7 +26,9 @@
   --color5:#75979F; /* BASE */
 
   --black:#181818;
-  --white:#f3f1e2;
+  /* --white:#f3f1e2; */
+  --white:#F6F6F4;
+  --blanco:white;
   --grey1:#575756;
   --grey2: #7B8794;
   --grey3: #9AA5B1;

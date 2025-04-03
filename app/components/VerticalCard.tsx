@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import ButtonAction from './ButtonAction';
 import styles from './VerticalCard.module.css';
 
 interface VerticalCardProps{

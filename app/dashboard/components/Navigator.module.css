@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border-radius: 100%;
+    border-radius: var(--border);
     padding: .5rem;
     transition: .3s ease-out;
 }

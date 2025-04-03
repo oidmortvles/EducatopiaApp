@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import NavRegister from './components/NavRegister';
 import RegisterForm from './components/RegisterForm';
 import styles from './register.module.css';
@@ -12,6 +13,7 @@ const Register : React.FC = () =>{
                     <RegisterForm/>
                 </div>
             </main>
+            <Footer/>
         </>
     )
 }
