@@ -1,24 +1,26 @@
-"use client"
+
 
 import Slider from '@/app/components/Slider';
 import styles from './SearchPanel.module.css';
 import TabsCategory from '../../components/TabsCategory';
-import useFilters from '@/app/storage/filters';
 
 
 const SearchPanel : React.FC = () =>{
 
-    const {filter} = useFilters();
-
     return(
         <section className={styles.searchPanel}>
-            <h4 className={styles.tittle}>Encontra todo el contenido por categoria</h4>
+            <h4 className={styles.tittle}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z"/>
+                </svg>
+                Encontra todo el contenido por categoria
+            </h4>
             <Slider >
-                <TabsCategory category='Literatura' state={filter} key={1}/>
-                <TabsCategory category='Ciencias Sociales' state={filter} />
-                <TabsCategory category='Geografia' state={filter} />
-                <TabsCategory category='Matematicas' state={filter} />
-                <TabsCategory category='Economia' state={filter} />
+                <TabsCategory category='Literatura' key={1}/>
+                <TabsCategory category='Ciencias Sociales'/>
+                <TabsCategory category='Geografia'/>
+                <TabsCategory category='Matematicas'/>
+                <TabsCategory category='Economia'/>
             </Slider>
         </section>
     )

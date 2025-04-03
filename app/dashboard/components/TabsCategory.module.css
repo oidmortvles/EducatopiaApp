@@ -5,6 +5,8 @@
     border-radius: var(--border);
     background-color: var(--color1c);
     color:var(--white);
+    font-size: small;
+    font-weight: 600;
     transition: .3s ease-out;
 }
 
@@ -21,6 +23,8 @@
     background-color: var(--color1b);
     border: 2px solid var(--color1);
     color:var(--white);
+    font-size: small;
+    font-weight: 600;
     transition: .3s ease-out; 
 }
 

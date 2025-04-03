@@ -12,7 +12,16 @@
 
 
 .tittle{
-    font-weight: 500;
+    font-weight: 600;
     font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+
+.tittle svg{
+    fill: var(--color2);
 }
 

@@ -5,12 +5,11 @@ import useFilters from '@/app/storage/filters';
 
 interface TabsCategoryProps{
     category:string;
-    state:string;
 }
 
-const TabsCategory : React.FC <TabsCategoryProps> = ({category, state}) =>{
+const TabsCategory : React.FC <TabsCategoryProps> = ({category}) =>{
 
-    const {filterOn} = useFilters();
+    const {filter, filterOn} = useFilters();
 
     const pushButton = () =>{
         filterOn(category);
@@ -19,7 +18,7 @@ const TabsCategory : React.FC <TabsCategoryProps> = ({category, state}) =>{
 
 
     return(
-        <button className={`${state == category ? styles.tabsCategoryActive : styles.tabsCategory}`} onClick={pushButton}>
+        <button className={`${filter === category ? styles.tabsCategoryActive : styles.tabsCategory}`} onClick={pushButton}>
             {category}
         </button>
     )
