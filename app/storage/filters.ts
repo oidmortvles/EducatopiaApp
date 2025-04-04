@@ -7,7 +7,7 @@ interface filterModel {
   }
 
 const useFilters = create <filterModel> ((set)=> ({
-    filter:"all",
+    filter:"All",
     filterOn: (newFilter:string) =>set({filter:newFilter}),
 }));
 

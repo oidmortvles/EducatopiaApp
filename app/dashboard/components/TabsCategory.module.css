@@ -1,4 +1,9 @@
 .tabsCategory{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5;
+    position: relative;
     padding: .5rem;
     border:none;
     border:2px solid transparent;
@@ -11,12 +16,35 @@
 }
 
 
+
 .tabsCategory:hover{
     background-color: var(--color1);
 }
 
 
+
+.icon{
+    fill: transparent;
+    position: absolute;
+    left: -10px;
+    opacity: 0;  
+    transition: .3s ease-out;  
+}
+
+
+.iconActive{
+    fill: var(--white);    
+    opacity: 1;  
+    translate: -6px;
+    transition: .3s ease-out;  
+}
+
+
 .tabsCategoryActive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5;
     padding: .5rem;
     border:none;
     border-radius: var(--border);

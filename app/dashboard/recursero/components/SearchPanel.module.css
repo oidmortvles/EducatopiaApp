@@ -19,9 +19,3 @@
     justify-content: center;
     gap: .5rem;
 }
-
-
-.tittle svg{
-    fill: var(--color2);
-}
-
