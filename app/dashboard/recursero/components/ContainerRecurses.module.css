@@ -1,6 +1,6 @@
 .containerRecurses{
     width: 100%;
-    height: 70dvh;
+    min-height: 75dvh;
     border-radius: var(--border);
     padding: 1rem;
     background-color: var(--blanco);

@@ -1,5 +1,6 @@
 import ButtonAction from './ButtonAction';
 import styles from './HorizontalCard.module.css';
+import PinButton from './PinButton';
 
 interface HorizontalCardProps{
     tittle: string;
@@ -16,6 +17,7 @@ const HorizontalCard : React.FC <HorizontalCardProps> = ({tittle, text, to, img}
             </div>
 
             <section className={styles.cardBody}>
+                <PinButton/>
                 <div className={styles.cardBox}>
                     <h5 className={styles.tittle}>{tittle}</h5>
                     <p className={styles.description}>{text}</p>

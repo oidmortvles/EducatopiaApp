@@ -4,7 +4,7 @@ import styles from './OwnContent.module.css';
 const OwnContent : React.FC = () =>{
     return(
         <section className={styles.ownContent}>
-            <div>
+            <div className={styles.addContent}>
                 <p className={styles.leyend}>Aún no subiste contenido!</p>
                 <ButtonAction colorSet={1} text='Subir Contenido' />
             </div>

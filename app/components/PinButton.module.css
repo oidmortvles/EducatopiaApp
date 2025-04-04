@@ -1,0 +1,34 @@
+.pinButton{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--blackTransparent);
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    z-index: 2;
+}
+
+
+.pinButton svg{
+    fill: var(--color1);
+    opacity: .5;
+    transition: .3s ease-out;
+}
+
+.pinButton:hover svg{
+    fill: var(--color1c);
+    opacity: 1;
+}
+
+
+.pinner{
+    fill: var(--color2) !important;
+    opacity: 1 !important;
+    transform: scale(1.5)!important;
+}
+

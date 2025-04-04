@@ -1,7 +1,7 @@
 /* NavSide.module.css */
 .navSide {
-  width: 20rem;
-  min-height: 90vdh;
+  width: 15rem;
+  height: 96dvh;
   border-radius: var(--border);
   background-color: #fff;
   padding: 1rem;
