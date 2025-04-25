@@ -83,4 +83,79 @@ body {
 }
 
 
+
+/* TIPTAP RICH TEXT EDITOR */
+.tiptap :first-child {
+    margin-top: 0;
+  }
+
+.ProseMirror{
+    height: 45rem;
+    overflow: auto;
+    background-color: var(--blanco);
+    padding: 1rem;
+    border: none;
+    border: thin solid var(--blackTransparent);
+    border-radius: var(--border);
+    outline: none;
+  }
+  
+  .tiptap ul, .tiptap ol {
+    padding: 0 1rem;
+    margin: 1.25rem 1rem 1.25rem 0.4rem;
+  }
+  
+  .tiptap li p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+  
+  .tiptap h1, .tiptap h2, .tiptap h3{
+    line-height: 1.1;
+    margin-top: 2.5rem;
+    text-wrap: pretty;
+  }
+
+  .tiptap h1, .tiptap h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tiptap h1 { 
+    font-size: 1.4rem; 
+  }
+
+  .tiptap h2 { 
+    font-size: 1.2rem; 
+  }
+
+  .tiptap h3 { 
+    font-size: 1.1rem; 
+  }
+
+  .tiptap h4{ 
+    font-size: 1rem; 
+  }
+
+
+  .tiptap code {
+    background-color: var(--color1c);
+    color: var(--color1b);
+    padding: .25em .3em;;
+  }
+
+  .tiptap blockquote {
+    border-left: 3px solid var(--grey3);
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+  }
+
+  .tiptap hr {
+    border: none;
+    border-top: 1px solid var(--grey3);
+    margin: 2rem 0;
+  }
+
+
 @media only screen and (max-width: 850px){}

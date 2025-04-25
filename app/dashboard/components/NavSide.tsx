@@ -5,6 +5,12 @@ import Resources from './icons/Resources';
 import Navigator from './Navigator';
 import styles from './NavSide.module.css';
 import Groups from './icons/Groups';
+import Podcast from './icons/Podcast';
+import Notes from './icons/Notes';
+import Slider from '@/app/components/Slider';
+import Dash from './icons/Dash';
+
+
 
 
 const NavSide : React.FC = () =>{
@@ -12,15 +18,27 @@ const NavSide : React.FC = () =>{
         <nav className={styles.navSide}>
             <Domain/>
             
-            <ul className={styles.list}>
+{/*             <ul className={styles.list}>
                 <Navigator text='Perfil' icon={<Profile/>} to='/dashboard/perfil' />
                 <Navigator text='Recursero' icon={<Resources/>} to='/dashboard/recursero' />
-                <Navigator text='Grupos' icon={<Groups/>} to='/dashboard/grupos' />                          
-            </ul>
+                <Navigator text='Grupos' icon={<Groups/>} to='/dashboard/grupos' />
+                <Navigator text='Podcast' icon={<Podcast/>} to='/dashboard/podcast'/>   
+                <Navigator text='Notas' icon={<Notes/>} to='/dashboard/notas'/>                       
+            </ul> */}
 
-            <div className={styles.foot}>
-                <Navigator text='Cerrar Sesión' icon={<Close/>} to='dashboard/salir'/>
-            </div>
+            <Slider>
+                <Navigator text='Perfil' icon={<Profile/>} to='/dashboard/perfil' />
+                <Navigator text='Recursero' icon={<Resources/>} to='/dashboard/recursero' />
+                <Navigator text='Grupos' icon={<Groups/>} to='/dashboard/grupos' />
+                <Navigator text='Podcast' icon={<Podcast/>} to='/dashboard/podcast'/>   
+                <Navigator text='Notas' icon={<Notes/>} to='/dashboard/notas'/>
+                <Navigator text='Control' icon={<Dash/>} to='/dashboard/control'/>
+                <Navigator text='Salir' icon={<Close/>} to='dashboard/salir'/>
+            </Slider>
+
+            {/* <div className={styles.foot}>
+                <Navigator text='Salir' icon={<Close/>} to='dashboard/salir'/>
+            </div> */}
         </nav>
     )
 }

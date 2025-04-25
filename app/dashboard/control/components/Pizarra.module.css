@@ -1,0 +1,72 @@
+.menuBar{
+    width: 100%;
+    min-height: 3rem;
+    padding: .5rem 1rem;
+    border: none;
+    border: thin solid var(--blackTransparent);
+    border-radius: var(--border);
+    background-color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+.menuBar button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    padding: .2rem;
+    background-color: #0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transform: scale(1.5); */
+    transition: .3s ease-out;   
+}
+
+.menuBar button svg{
+    stroke: var(--grey2);
+    stroke-width: 1px;
+    fill: var(--grey2);
+    opacity: .7;
+    transition: .3s ease-out;
+}
+
+
+.menuBar button:hover svg{
+    opacity: 1;
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.isActive{    
+    background-color: var(--color1) !important;    
+}
+
+
+.isActive svg{
+    stroke: var(--white) !important; 
+    stroke-width: 1px !important; 
+    fill: var(--white)!important; 
+    opacity: 1 !important; 
+    transition: .3s ease-out !important; 
+}
+  
