@@ -17,15 +17,6 @@ const NavSide : React.FC = () =>{
     return(
         <nav className={styles.navSide}>
             <Domain/>
-            
-{/*             <ul className={styles.list}>
-                <Navigator text='Perfil' icon={<Profile/>} to='/dashboard/perfil' />
-                <Navigator text='Recursero' icon={<Resources/>} to='/dashboard/recursero' />
-                <Navigator text='Grupos' icon={<Groups/>} to='/dashboard/grupos' />
-                <Navigator text='Podcast' icon={<Podcast/>} to='/dashboard/podcast'/>   
-                <Navigator text='Notas' icon={<Notes/>} to='/dashboard/notas'/>                       
-            </ul> */}
-
             <Slider>
                 <Navigator text='Perfil' icon={<Profile/>} to='/dashboard/perfil' />
                 <Navigator text='Recursero' icon={<Resources/>} to='/dashboard/recursero' />
@@ -33,12 +24,8 @@ const NavSide : React.FC = () =>{
                 <Navigator text='Podcast' icon={<Podcast/>} to='/dashboard/podcast'/>   
                 <Navigator text='Notas' icon={<Notes/>} to='/dashboard/notas'/>
                 <Navigator text='Control' icon={<Dash/>} to='/dashboard/control'/>
-                <Navigator text='Salir' icon={<Close/>} to='dashboard/salir'/>
+                <Navigator text='Salir' icon={<Close/>} to='/dashboard/salir'/>
             </Slider>
-
-            {/* <div className={styles.foot}>
-                <Navigator text='Salir' icon={<Close/>} to='dashboard/salir'/>
-            </div> */}
         </nav>
     )
 }

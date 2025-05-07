@@ -1,5 +1,5 @@
 .notification{
-    min-width: 20rem;
+    width: 20rem;
     min-height: 5rem;
     padding: .5rem;
     background-color: var(--blanco);
@@ -7,10 +7,51 @@
     border-radius: var(--border);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
+    gap: .5rem; 
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.notification p{
+    font-size: small;
+    max-width: 100%;
+    text-align: left;
+    line-height: 1.2rem;
+    text-wrap-style: balance;
+}
+
+
+.success{
+    fill: var(--success);
+    min-width: 1rem;
+}
+
+.error{
+    fill: var(--error);
+    min-width: 1rem;
+}
+
+.signal{
+    fill: var(--color5);
+    min-width: 1rem;
+}
+
+
+.list{    
     position: fixed;
     bottom: 2rem;
+    padding: 0rem 1rem 1rem 1rem;
     left: 40%;
     z-index: 100000;
     overflow: hidden;
+    background-color: transparent;
+    height: calc(100%);
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    pointer-events: none
 }
