@@ -1,6 +1,6 @@
 "use server"
-import { cookieSet } from '@/app/utilities/cookieSet';
 import { revalidatePath } from 'next/cache';
+import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
 
@@ -37,7 +37,14 @@ export async function POST(request: NextRequest){
         }               
         
         //=> GUARDA LA COOKIE
-        cookieSet(request, response, responseBody);
+        const cookieStore = await cookies();
+        cookieStore.set('access_token', responseBody.accessToken, {
+          httpOnly: true,
+          secure: true,
+          sameSite: 'lax',
+          path: '/',
+          maxAge: 60 * 60 * 24 * 7, //=> 1 SEMANA
+        });
 
         //=> ACTUALIZA EL CACHE
         revalidatePath('/', 'layout');
