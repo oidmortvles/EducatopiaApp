@@ -12,6 +12,7 @@ export async function GET(){
         //=> ELIMINA LA COOKIE
         const cookieStore = await cookies();
         cookieStore.delete('access_token');
+        cookieStore.delete('user');
 
         return response;
 

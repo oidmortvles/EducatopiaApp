@@ -2,7 +2,7 @@ import styles from './TabsData.module.css';
 
 interface TabsDataProps{
     tittle: string;
-    data:string;
+    data:string | null;
 }
 
 const TabsData : React.FC <TabsDataProps> = ({tittle, data}) =>{

@@ -28,17 +28,40 @@ export async function POST(request: NextRequest){
             body: JSON.stringify(formattedData),
         });
 
+        
+        const setCookieHeader = res.headers.get('set-cookie'); //=> OBTENEMOS LA COOKIE DEL SERVIDOR
         const responseBody = await res.json();
         const response = NextResponse.json(responseBody);
+
         
         if (!res.ok) {
           console.error("❌ Error en respuesta del servidor externo:", responseBody);
           return response;
-        }               
+        }
         
-        //=> GUARDA LA COOKIE
-        const cookieStore = await cookies();
-        cookieStore.set('access_token', responseBody.accessToken, {
+        // => EXTRAER EL TOKEN DE LA COOKIE
+        const match = setCookieHeader?.match(/access_token=([^;]+);/);
+        const accessToken = match?.[1];
+
+        if (!accessToken) {
+          console.error("❌ No se encontró el access_token en las cookies");
+          return NextResponse.json({ message: 'Token no encontrado en la respuesta' }, { status: 500 });
+        }
+
+        
+        //=> GUARDAR LAS COOKIES
+        const cookieToken = await cookies();
+        cookieToken.set('access_token', accessToken, {
+          httpOnly: true,
+          secure: true,
+          sameSite: 'lax',
+          path: '/',
+          maxAge: 60 * 60 * 24 * 7, //=> 1 SEMANA
+        });
+
+
+        const cookieUser = await cookies();
+        cookieUser.set('user', JSON.stringify(responseBody), {
           httpOnly: true,
           secure: true,
           sameSite: 'lax',
