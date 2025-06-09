@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 
-const getUserData = async() =>{
+const getForums = async() =>{
 
     try{
         const cookiesStore = await cookies()
@@ -12,16 +12,10 @@ const getUserData = async() =>{
             throw new Error("Faltan cookies necesarias");
         }
 
-        const parsedUser = JSON.parse(userCookie)
-        const userID = parsedUser.UserID
-
         //URL DE CONSULTA
         const params = new URLSearchParams();
-        params.append('modelName', 'User');
-        params.append('filters[UserID][=]', userID);
-
+        params.append('modelName', 'Forum');
         const URL = `${process.env.API_URL}/private/models?${params.toString()}`;
-
 
         const response = await fetch(URL, {
             method: 'GET',
@@ -34,18 +28,18 @@ const getUserData = async() =>{
 
         if (!response.ok) {
             console.error(response);
-            throw new Error("Fallo la consulta de Perfil");
+            throw new Error("Fallo la consulta de Grupos");
         }
 
         return response.json();
 
 
     }catch(error){
-        console.error('Error en getUserData:', error);
+        console.error('Error en getForums:', error);
         return null
     }
 
 }
 
 
-export default getUserData
+export default getForums

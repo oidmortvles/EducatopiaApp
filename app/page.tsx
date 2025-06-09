@@ -5,12 +5,13 @@ import Content from './components/Content';
 import Community from './components/Community';
 import ButtonAction from './components/ButtonAction';
 import Footer from './components/Footer';
+import FeedbackForm from './components/FeedbackForm';
 
 
 const Home : React.FC = () =>{
   return(
     <main className={stlyes.home}>
-      <Nav/>
+      {/* <Nav/>
       
       <Header/>
       <Content/>
@@ -24,7 +25,8 @@ const Home : React.FC = () =>{
             <ButtonAction colorSet={0} text='ACTION' />
       </div>
     
-      <Footer/>
+      <Footer/> */}
+      <FeedbackForm/>
     </main>    
   )
 }

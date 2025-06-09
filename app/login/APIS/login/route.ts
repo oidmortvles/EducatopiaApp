@@ -24,7 +24,6 @@ export async function POST(request: NextRequest){
         const res = await fetch(URL,{
             method: 'POST',
             headers: {'Content-Type': 'application/json', 'x-api-key': `${process.env.HEADER_FETCH}`},
-            credentials: 'include',
             body: JSON.stringify(formattedData),
         });
 
@@ -61,7 +60,7 @@ export async function POST(request: NextRequest){
 
 
         const cookieUser = await cookies();
-        cookieUser.set('user', JSON.stringify(responseBody), {
+        cookieUser.set('user', JSON.stringify(responseBody.data), {
           httpOnly: true,
           secure: true,
           sameSite: 'lax',

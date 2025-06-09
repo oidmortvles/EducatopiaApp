@@ -158,4 +158,8 @@ body {
   }
 
 
-@media only screen and (max-width: 850px){}
+@media only screen and (max-width: 850px){
+  body{
+    padding: 0rem 2rem;
+  }
+}

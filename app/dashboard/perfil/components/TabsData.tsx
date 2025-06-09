@@ -9,7 +9,7 @@ const TabsData : React.FC <TabsDataProps> = ({tittle, data}) =>{
     return(
         <li className={styles.tabsData}>
             <p className={styles.tittle}>• {tittle}</p>
-            <p className={styles.data}>{data}</p>
+            <p className={styles.data}>{data ? data : "Sin completar"}</p>
         </li>
     )
 }

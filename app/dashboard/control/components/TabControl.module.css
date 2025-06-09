@@ -1,0 +1,19 @@
+.tabControl{
+    min-width: 7rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border);
+    background-color: var(--blackTransparent);
+    color: var(--white);
+    font-weight: 600;
+    transition: background-color .3s ease-out;
+}
+
+
+.tabControl:hover{
+    background-color: var(--color5);
+}
