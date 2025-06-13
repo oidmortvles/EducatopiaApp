@@ -4,8 +4,8 @@ import { cookies } from 'next/headers';
 
 const transformData = (data:any) => {
   return {
-    Email: data.emailLogin, 
-    Password:data.passwordLogin
+    Name: data.nameGroup, 
+    Description:data.descriptionGroup,
   };
 };
 

@@ -11,7 +11,7 @@ import FeedbackForm from './components/FeedbackForm';
 const Home : React.FC = () =>{
   return(
     <main className={stlyes.home}>
-      {/* <Nav/>
+      <Nav/>
       
       <Header/>
       <Content/>
@@ -25,8 +25,7 @@ const Home : React.FC = () =>{
             <ButtonAction colorSet={0} text='ACTION' />
       </div>
     
-      <Footer/> */}
-      <FeedbackForm/>
+      <Footer/>
     </main>    
   )
 }

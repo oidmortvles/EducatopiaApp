@@ -29,10 +29,11 @@
 }
 
 .imInput{
-    padding: 0.5rem 2rem 0rem 0.5rem;
+    padding: .5rem 2rem 0 .5rem;
     border: none;
-    border-radius: var(--border); 
-    background-color: white;
+    border: thin solid var(--color1);
+    border-radius: var(--border);
+    background-color: var(--blanco);
     height: 3rem;
     width: 100%;
     user-select: text;

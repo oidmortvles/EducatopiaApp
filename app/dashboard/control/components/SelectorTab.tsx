@@ -4,6 +4,7 @@ import Slider from '@/app/components/Slider';
 import TabControl from './TabControl';
 import { useState } from 'react';
 import Pizarra from './Pizarra';
+import CreateGroup from './CreateGroup';
 
 const SelectorTab : React.FC = () =>{
     const [activeSection, setActiveSection] = useState("");
@@ -20,7 +21,7 @@ const SelectorTab : React.FC = () =>{
                 return <Pizarra/>;
 
             case 'Grupo':
-            return 'Grupo';  
+            return <CreateGroup/> 
             
             case 'Recurso':
             return 'Recurso';
@@ -29,7 +30,7 @@ const SelectorTab : React.FC = () =>{
             return 'Podcast';           
 
             default:
-            return <p>Selecciona una opción para comenzar</p>;
+            return <CreateGroup/> 
         }
     }
 
