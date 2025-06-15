@@ -1,3 +1,27 @@
+.tittle, .description, .audiovisual{
+    width: 100%;
+    min-height: 3rem;
+    padding: .5rem;
+    border: thin solid var(--color1);
+    border-radius: var(--border);
+    transition: border-color .3s ease-out;
+}
+
+
+.tittle:hover, .description:hover, .audiovisual:hover{
+    border-color: var(--color1Transparent);
+}
+
+
+input::placeholder{
+    opacity: .7;
+}
+
+
+.tittle:focus, .description:focus, .audiovisual:focus{
+    outline: none;
+}
+
 .menuBar{
     width: 100%;
     min-height: 3rem;
@@ -23,7 +47,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transform: scale(1.5); */
     transition: .3s ease-out;   
 }
 
@@ -69,4 +92,82 @@
     opacity: 1 !important; 
     transition: .3s ease-out !important; 
 }
-  
+
+
+.optionsContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.files{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.files p{
+    font-size: x-small;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btnFiles{
+    display: none;
+}
+
+.labelFile{
+    width: fit-content;
+    padding: .2rem;
+    border: none;
+    border-radius: var(--border);
+    background-color: var(--blackTransparent);
+    font-size: x-small;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white);
+    transition: .3s ease-out;
+}
+
+.labelFile:hover{
+    background-color: var(--color5);
+    cursor: pointer;
+}
+
+.subjetc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subjetc label{
+    font-size: x-small;
+    text-transform: uppercase;
+    font-weight: 600;  
+}
+
+.subjetc select{
+    width: 10rem;
+    border-color: var(--color1);
+    border-radius: var(--border);
+    outline: none;
+}
+
+
+.subjetc select option{
+    font-size: smaller;
+    font-weight: 600;
+}
+
+
+.btnSend{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}

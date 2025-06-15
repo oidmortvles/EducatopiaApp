@@ -17,7 +17,6 @@ const ForumContainer : React.FC = async () => {
     return(
         <section className={styles.forumContainer}>
             {   
-                //grupos.length > 5 
                 grupos? 
                 (
                     grupos.map((g: Grupo) =>(

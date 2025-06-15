@@ -50,7 +50,7 @@ const CreateGroup : React.FC = () => {
             
             
             <div>
-                <ButtonAction colorSet={1} text='Crear' type='submit' deshabilitado={loading} loader={loading} />
+                <ButtonAction colorSet={1} text='Crear Grupo' type='submit' deshabilitado={loading} loader={loading} />
             </div>
         </form>
     )

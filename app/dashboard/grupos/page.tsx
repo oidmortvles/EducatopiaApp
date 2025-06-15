@@ -1,6 +1,5 @@
 import DescriptionBar from '@/app/components/DescriptionBar';
 import styles from './grupos.module.css';
-import { Forum } from 'next/font/google';
 import ForumContainer from './components/ForumContainer';
 
 const Grupos : React.FC = async () =>{

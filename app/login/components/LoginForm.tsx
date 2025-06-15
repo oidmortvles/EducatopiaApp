@@ -11,10 +11,10 @@ import useAlert from '@/app/storage/alerts';
 
 const LoginForm : React.FC = () =>{
 
-    const {register, handleSubmit, formState:{errors}, reset} = useForm();
-    const {data, loading, fetchData} = usePost();
-    const {addAlert} = useAlert();
-    const router = useRouter();
+    const {register, handleSubmit, formState:{errors}, reset} = useForm(); //=> MANEJAR FORM
+    const {data, loading, fetchData} = usePost(); //=> HACER PETICION
+    const {addAlert} = useAlert(); //=> MOSTRAR NOTIFICACION
+    const router = useRouter(); //=> REDIRIJIR A OTRA PAGINA
 
 
     useEffect(() => {

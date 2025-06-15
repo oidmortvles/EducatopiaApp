@@ -5,6 +5,7 @@ import TabControl from './TabControl';
 import { useState } from 'react';
 import Pizarra from './Pizarra';
 import CreateGroup from './CreateGroup';
+import DeleteGroup from './DeleteGroup';
 
 const SelectorTab : React.FC = () =>{
     const [activeSection, setActiveSection] = useState("");
@@ -17,17 +18,14 @@ const SelectorTab : React.FC = () =>{
     //=> FUNCION PARA RENDERIZAR TAB
     const renderContent = () =>{
         switch (activeSection) {
-            case 'Nota':
-                return <Pizarra/>;
-
             case 'Grupo':
             return <CreateGroup/> 
-            
-            case 'Recurso':
-            return 'Recurso';
 
-            case 'Podcast':
-            return 'Podcast';           
+            case 'BorrarGrupo':
+                return <DeleteGroup/>;  
+
+            case 'Nota':
+                return <Pizarra/>;          
 
             default:
             return <CreateGroup/> 
@@ -39,9 +37,8 @@ const SelectorTab : React.FC = () =>{
         <aside className={styles.selectorTab}>   
             <Slider >
                 <TabControl text='Crear Grupo' fn={() => choiseSection("Grupo")} />
-                <TabControl text='Crear Nota' fn={() => choiseSection("Nota")} />
-                <TabControl text='Crear Recurso'fn={() => choiseSection("Recurso")} />
-                <TabControl text='Crear Podcast' fn={() => choiseSection("Podcast")} />
+                <TabControl text='Eliminar Grupo' fn={() => choiseSection("BorrarGrupo")} />
+                <TabControl text='Subir Contenido' fn={() => choiseSection("Nota")} />
             </Slider>
 
             <section className={styles.content}>
