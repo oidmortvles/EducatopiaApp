@@ -7,14 +7,14 @@ export async function DELETE(request: NextRequest) {
             const access_token= cookiesStore.get('access_token')?.value;
 
             const body = await request.json();
-            const { ForumID } = body;
+            const { TagID } = body;
             
             //VERIFICA LAS COOKIES
             if (!access_token) {
                 throw new Error("Faltan cookies necesarias");
             }
 
-            const URL =`${process.env.API_URL}/private/forums/${ForumID}`;
+            const URL =`${process.env.API_URL}/private/tags/${TagID}`;
 
             const res = await fetch(URL,{
                 method: 'DELETE',

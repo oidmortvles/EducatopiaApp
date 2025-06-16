@@ -1,3 +1,4 @@
+"use client"
 import { useForm } from 'react-hook-form';
 import styles from './CreateGroup.module.css';
 import { usePost } from '@/app/utilities/usePost';

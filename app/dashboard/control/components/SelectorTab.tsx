@@ -6,6 +6,8 @@ import { useState } from 'react';
 import Pizarra from './Pizarra';
 import CreateGroup from './CreateGroup';
 import DeleteGroup from './DeleteGroup';
+import CreateCategory from './CreateCategory';
+import DeleteCategory from './DeleteCategory';
 
 const SelectorTab : React.FC = () =>{
     const [activeSection, setActiveSection] = useState("");
@@ -18,13 +20,19 @@ const SelectorTab : React.FC = () =>{
     //=> FUNCION PARA RENDERIZAR TAB
     const renderContent = () =>{
         switch (activeSection) {
-            case 'Grupo':
+            case 'CrearGrupo':
             return <CreateGroup/> 
 
             case 'BorrarGrupo':
                 return <DeleteGroup/>;  
 
-            case 'Nota':
+            case 'CrearCategoria':
+                return <CreateCategory/>;  
+
+            case 'BorrarCategoria':
+                return <DeleteCategory/>; 
+
+            case 'CrearContenido':
                 return <Pizarra/>;          
 
             default:
@@ -36,9 +44,11 @@ const SelectorTab : React.FC = () =>{
     return(
         <aside className={styles.selectorTab}>   
             <Slider >
-                <TabControl text='Crear Grupo' fn={() => choiseSection("Grupo")} />
+                <TabControl text='Crear Grupo' fn={() => choiseSection("CrearGrupo")} />
                 <TabControl text='Eliminar Grupo' fn={() => choiseSection("BorrarGrupo")} />
-                <TabControl text='Subir Contenido' fn={() => choiseSection("Nota")} />
+                <TabControl text='Crear Categoría' fn={() => choiseSection("CrearCategoria")} />
+                <TabControl text='Eliminar Categoría' fn={() => choiseSection("BorrarCategoria")} />
+                <TabControl text='Subir Contenido' fn={() => choiseSection("CrearContenido")} />
             </Slider>
 
             <section className={styles.content}>

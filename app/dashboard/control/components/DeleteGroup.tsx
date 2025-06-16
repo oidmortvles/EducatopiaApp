@@ -70,7 +70,7 @@ const DeleteGroup :React.FC = () => {
               )
               :
               (
-                <p className={styles.aviso}>No hay grupos creados</p>
+                <p className={styles.aviso}>No hay grupos activos</p>
             )
             }
         </section>

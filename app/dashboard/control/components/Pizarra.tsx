@@ -17,7 +17,15 @@ import H1 from '../../components/icons/H1';
 import H2 from '../../components/icons/H2';
 import H3 from '../../components/icons/H3';
 import ButtonAction from '@/app/components/ButtonAction';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { usePost } from '@/app/utilities/usePost';
+import useAlert from '@/app/storage/alerts';
+
+
+type categoryType ={
+    TagID: number,
+    Name: string,
+}
 
 
 const MenuBar = () => {
@@ -126,10 +134,28 @@ const Pizarra : React.FC = () => {
   const [fileHeader, setFileHeader] = useState<File | null>(null); //=> FILE HEADER
   const [fileBody, setFileBody] = useState<File | null>(null); //=> FILE BODY
   const [fileFooter, setFileFooter] = useState<File | null>(null); //=> FILE FOOTER  
-  const [forum, setForum] = useState("1"); //=> DESTINO DEL POST (1: RECURSERO, 2: NOTAS, 3: PODCAST)
+  const [list, setList] = useState<categoryType[]>([]); //=> LISTA DE CATEGORIAS
+  const [numberCat, setNumberCat] = useState(''); //=> SELECCION DE LA CATEGORIA
+  const [forum, setForum] = useState("0"); //=> DESTINO DEL POST (10: RECURSERO, 11: NOTAS, 12: PODCAST)
+  const {data, loading, fetchData} = usePost(); //=> HACER DELETE
+  const {addAlert} = useAlert(); //=> MOSTRAR NOTIFICACION
+
+  useEffect(() => {
+    if (data) {
+      addAlert(data); //=> SI HAY RESPUESTA LA AGREGA A NOTIFICACIONES
+    }
+
+    const renderTags = async () =>{
+        const res = await fetch('/dashboard/control/APIS/listarCategorias');
+        const data = await res.json();
+        setList(data)            
+    }
+    renderTags();    
+
+  },[data])
 
   
-  const crearPosteo = () => {
+  const crearPosteo = async () => {
     const title = titleRef.current?.value ?? '';
     const descripcion = descRef.current?.value ?? '';
     const audiovisuals = audiovisualRef.current?.value ?? '';
@@ -153,9 +179,17 @@ const Pizarra : React.FC = () => {
       formData.append('footer', fileFooter, fileFooter.name);
     }
 
-    formData.append('Forums', forum)
+    formData.append('Tags', numberCat.toString());
+    formData.append('ActivityID', "1"); //=> ID DE LA ACTIVIDAD (1: PIZARRA)
+
+    formData.append('Forums', forum);
     
-    console.log(formData);
+    await fetch('/dashboard/control/APIS/crearPost', {
+    method: 'POST',
+    body: formData, // ⬅️ importante
+    // ❌ no pongas Content-Type a mano, el navegador lo maneja
+  });
+    
   }
 
 
@@ -168,8 +202,9 @@ const Pizarra : React.FC = () => {
       <EditorProvider slotBefore={<MenuBar />} extensions={extensions} content={content} onCreate={({ editor }) => setEditorInstance(editor)}/>
       
       <section className={styles.optionsContainer}>        
+          
           <div className={styles.files}>
-            <p>Subir archivos</p>
+            <p>Subir archivos:</p>
             <label htmlFor='fileHeader' className={styles.labelFile} style={fileHeader ? { backgroundColor: '#5c97a0' } : {}}> Subir Header </label>
             <input id='fileHeader' className={styles.btnFiles} type="file" onChange={(e) => setFileHeader(e.target.files?.[0] ?? null)}/>
             
@@ -180,9 +215,22 @@ const Pizarra : React.FC = () => {
             <input id='fileFooter' className={styles.btnFiles} type="file" onChange={(e) => setFileFooter(e.target.files?.[0] ?? null)}/>
           </div>
 
+          <div className={styles.categorys}>
+            <label htmlFor="category">Categoría:</label>            
+            <select id="category" name="category" onChange={(e) => setNumberCat(e.target.value)} value={numberCat}>
+              <option value="" disabled>Seleccione una categoría...</option>
+              {
+                  list.map((group) => (                                
+                      <option value={group.TagID} key={group.TagID}>{group.Name}</option>
+                  ))
+              }
+            </select>
+          </div>
+
           <div className={styles.subjetc}>
             <label htmlFor="contenidos">Subir en:</label>
-            <select id="contenidos" name="contenidos" onChange={(e) => setForum(e.target.value)}>
+            <select id="contenidos" name="contenidos" onChange={(e) => setForum(e.target.value)} value={forum}>
+              <option value="0" disabled>Seleccione un destino...</option>
               <option value="10">RECURSERO</option>
               <option value="11">NOTAS</option>
               <option value="12">PODCAST</option>
@@ -191,7 +239,7 @@ const Pizarra : React.FC = () => {
       </section>
         
         <div className={styles.btnSend}>
-          <ButtonAction colorSet={1} text='Crear Post' fn={crearPosteo}/>        
+          <ButtonAction colorSet={1} text='Crear Post' fn={crearPosteo} loader={loading} deshabilitado={loading} />        
         </div>
     </>
   )

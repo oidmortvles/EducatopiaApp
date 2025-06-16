@@ -19,10 +19,10 @@ const NavSide : React.FC = () =>{
             <Domain/>
             <Slider>
                 <Navigator text='Perfil' icon={<Profile/>} to='/dashboard/perfil' />
-                <Navigator text='Recursero' icon={<Resources/>} to='/dashboard/recursero' />
                 <Navigator text='Grupos' icon={<Groups/>} to='/dashboard/grupos' />
-                <Navigator text='Podcast' icon={<Podcast/>} to='/dashboard/podcast'/>   
+                <Navigator text='Recursero' icon={<Resources/>} to='/dashboard/recursero' />
                 <Navigator text='Notas' icon={<Notes/>} to='/dashboard/notas'/>
+                <Navigator text='Podcast' icon={<Podcast/>} to='/dashboard/podcast'/>   
                 <Navigator text='Control' icon={<Dash/>} to='/dashboard/control'/>
                 <Navigator text='Salir' icon={<Close/>} to='/dashboard/salir'/>
             </Slider>

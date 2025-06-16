@@ -137,28 +137,28 @@ input::placeholder{
     cursor: pointer;
 }
 
-.subjetc{
+.categorys , .subjetc{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-.subjetc label{
+.categorys label,.subjetc label{
     font-size: x-small;
     text-transform: uppercase;
     font-weight: 600;  
 }
 
-.subjetc select{
-    width: 10rem;
+.categorys select ,.subjetc select{
+    width: 15rem;
     border-color: var(--color1);
     border-radius: var(--border);
     outline: none;
 }
 
 
-.subjetc select option{
+.categorys select option, .subjetc select option{
     font-size: smaller;
     font-weight: 600;
 }

@@ -1,29 +1,39 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 
-export async function DELETE(request: NextRequest) {
+const transformData = (data:any) => {
+  return {
+    Name: data.nameGroup,
+  };
+};
+
+export async function POST(request: NextRequest) {
         try {
+
             const cookiesStore = await cookies()
             const access_token= cookiesStore.get('access_token')?.value;
 
-            const body = await request.json();
-            const { ForumID } = body;
+            const dataCategory = await request.json();
+            const formattedData  = transformData(dataCategory);
             
             //VERIFICA LAS COOKIES
             if (!access_token) {
                 throw new Error("Faltan cookies necesarias");
             }
 
-            const URL =`${process.env.API_URL}/private/forums/${ForumID}`;
+            const URL =`${process.env.API_URL}/private/tags`;
 
             const res = await fetch(URL,{
-                method: 'DELETE',
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', 
                     'x-api-key': `${process.env.HEADER_FETCH}`,
                     'Cookie': `access_token=${access_token}`,
                 },
-            });   
+                body: JSON.stringify(formattedData),
+            });
+    
             
             const responseBody = await res.json();
             const response = NextResponse.json(responseBody);
@@ -34,6 +44,10 @@ export async function DELETE(request: NextRequest) {
               return response;
             }
 
+    
+            //=> ACTUALIZA EL CACHE
+            revalidatePath('/', 'layout');
+    
             return response;
     
     
