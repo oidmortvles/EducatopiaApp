@@ -1,0 +1,22 @@
+.uploadFiles{
+    width: 100%;
+    border-radius: var(--border);
+    border: thick solid var(--blanco);
+    padding: 1rem;
+    background-color: var(--blackTransparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+
+.tittle{
+    color: var(--blanco);
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}

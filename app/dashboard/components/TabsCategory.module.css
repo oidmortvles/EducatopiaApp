@@ -10,8 +10,9 @@
     border-radius: var(--border);
     background-color: var(--color1c);
     color:var(--white);
-    font-size: small;
+    font-size: x-small;
     font-weight: 600;
+    text-transform: uppercase;
     transition: .3s ease-out;
 }
 
@@ -51,8 +52,9 @@
     background-color: var(--color1b);
     border: 2px solid var(--color1);
     color:var(--white);
-    font-size: small;
+    font-size: x-small;
     font-weight: 600;
+    text-transform: uppercase;
     transition: .3s ease-out; 
 }
 

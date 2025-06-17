@@ -1,0 +1,131 @@
+.formUpload{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.tittle{
+    width: 100%;
+    min-height: 3rem;
+    padding: .5rem;
+    border: thin solid var(--color1);
+    border-radius: var(--border);
+    transition: border-color .3s ease-out;
+}
+
+
+.description{
+    width: 100%;
+    min-height: 5rem;
+    padding: .5rem;
+    border: thin solid var(--color1);
+    border-radius: var(--border);
+    transition: border-color .3s ease-out;
+}
+
+.tittle:hover, .description:hover{
+    border-color: var(--color1Transparent);
+}
+
+input::placeholder{
+    opacity: .7;
+}
+
+textarea::placeholder{
+    opacity: .7;
+}
+
+.tittle:focus, .description:focus{
+    outline: none;
+}
+
+
+.boxFilesCategory{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.files{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.labelFile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: fit-content;
+    padding: .2rem .5rem;
+    background-color: var(--color1b);
+    border-radius: var(--border);
+    color: var(--white);
+    font-size: x-small;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+    transition: .3s ease-out;
+}
+
+.labelFile:hover{
+    background-color: var(--color1);
+}
+
+
+.labelFile svg{
+    fill: var(--blanco);
+}
+
+
+.btnFiles{
+    display: none;
+}
+
+
+.categorys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.categorys label{
+    font-size: x-small;
+    text-transform: uppercase;
+    font-weight: 600;  
+}
+
+.categorys select{
+    width: 15rem;
+    border-color: var(--color1);
+    border-radius: var(--border);
+    outline: none;
+}
+
+
+.categorys select option{
+    font-size: smaller;
+    font-weight: 600;
+}
+
+
+.btns{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}

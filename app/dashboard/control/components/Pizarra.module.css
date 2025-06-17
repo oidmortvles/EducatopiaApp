@@ -17,6 +17,10 @@ input::placeholder{
     opacity: .7;
 }
 
+textarea::placeholder{
+    opacity: .7;
+}
+
 
 .tittle:focus, .description:focus, .audiovisual:focus{
     outline: none;

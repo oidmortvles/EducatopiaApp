@@ -123,12 +123,12 @@ const extensions = [
     }),
 ]
 
-const content = `Contenido del Post`;
+const content = ``;
 
 const Pizarra : React.FC = () => {
 
   const titleRef = useRef<HTMLInputElement>(null); //=> TITULO
-  const descRef = useRef<HTMLInputElement>(null); //=> DESCRIPCION
+  const descRef = useRef<HTMLTextAreaElement>(null); //=> DESCRIPCION
   const audiovisualRef = useRef<HTMLInputElement>(null); //=> AUDIOVISUAL  
   const [editorInstance, setEditorInstance] = useState<any>(null); //=> CONTENIDO
   const [fileHeader, setFileHeader] = useState<File | null>(null); //=> FILE HEADER
@@ -137,7 +137,7 @@ const Pizarra : React.FC = () => {
   const [list, setList] = useState<categoryType[]>([]); //=> LISTA DE CATEGORIAS
   const [numberCat, setNumberCat] = useState(''); //=> SELECCION DE LA CATEGORIA
   const [forum, setForum] = useState("0"); //=> DESTINO DEL POST (10: RECURSERO, 11: NOTAS, 12: PODCAST)
-  const {data, loading, fetchData} = usePost(); //=> HACER DELETE
+  const {data, loading, fetchData} = usePost(); //=> HACER POST
   const {addAlert} = useAlert(); //=> MOSTRAR NOTIFICACION
 
   useEffect(() => {
@@ -196,7 +196,7 @@ const Pizarra : React.FC = () => {
   return (
     <>      
       <input ref={titleRef} className={styles.tittle} type="text" placeholder="Ingrese un título para el Post" name='tittle' />
-      <input  ref={descRef} className={styles.description} type="text" placeholder="Ingrese una descripción para el Post" name='description' />
+      <textarea ref={descRef} className={styles.description} placeholder="Ingrese una descripción para el Post" name='description'></textarea>
       <input  ref={audiovisualRef} className={styles.audiovisual} type="text" placeholder="Ingrese un link para el Post" name='audiovisual' />
       
       <EditorProvider slotBefore={<MenuBar />} extensions={extensions} content={content} onCreate={({ editor }) => setEditorInstance(editor)}/>

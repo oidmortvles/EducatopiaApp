@@ -1,15 +1,16 @@
 .tabControl{
     min-width: 7rem;
-    min-height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: .5rem 1rem;
     border: none;
     border-radius: var(--border);
     background-color: var(--blackTransparent);
     color: var(--white);
     font-weight: 600;
+    font-size: x-small;
+    text-transform: uppercase;
     transition: background-color .3s ease-out;
 }
 

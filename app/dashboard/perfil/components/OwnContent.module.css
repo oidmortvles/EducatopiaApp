@@ -10,7 +10,7 @@
 }
 
 
-.addContent{
+.changePass{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,5 +19,7 @@
 
 
 .leyend{
-    font-size: small;
+    font-size: x-small;
+    font-weight: 600;
+    text-transform: uppercase;
 }
